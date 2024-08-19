@@ -1,0 +1,1 @@
+/home/zos-m1/Documents/my-module/hello.o
