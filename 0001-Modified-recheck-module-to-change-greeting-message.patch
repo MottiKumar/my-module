@@ -1,0 +1,115 @@
+From 37b7a0efe3c2475b9c8c5029648f5a3c7a84c667 Mon Sep 17 00:00:00 2001
+From: MottiKumar Babu <mottikumarbabu@gmail.com>
+Date: Mon, 19 Aug 2024 18:17:18 -0500
+Subject: [PATCH] Modified recheck module to change greeting message
+
+Signed-off-by: MottiKumar Babu <mottikumarbabu@gmail.com>
+---
+ 0001-first-commit.patch |  21 +++++++++++++++++++++
+ hello.c                 |   6 +++---
+ hello.ko                | Bin 109952 -> 110016 bytes
+ hello.o                 | Bin 18464 -> 18496 bytes
+ 4 files changed, 24 insertions(+), 3 deletions(-)
+ create mode 100644 0001-first-commit.patch
+
+diff --git a/0001-first-commit.patch b/0001-first-commit.patch
+new file mode 100644
+index 0000000..8e1f482
+--- /dev/null
++++ b/0001-first-commit.patch
+@@ -0,0 +1,21 @@
++From 1b3763c9894f01cdc734f9b7ad7766604e8fb5f7 Mon Sep 17 00:00:00 2001
++From: MottiKumar Babu <mottikumarbabu@gmail.com>
++Date: Mon, 19 Aug 2024 18:10:06 -0500
++Subject: [PATCH] first commit
++
++Signed-off-by: MottiKumar Babu <mottikumarbabu@gmail.com>
++---
++ README.md | 1 +
++ 1 file changed, 1 insertion(+)
++ create mode 100644 README.md
++
++diff --git a/README.md b/README.md
++new file mode 100644
++index 0000000..2acabff
++--- /dev/null
+++++ b/README.md
++@@ -0,0 +1 @@
+++# my-module
++-- 
++2.39.2
++
+diff --git a/hello.c b/hello.c
+index 07b3819..27faad9 100644
+--- a/hello.c
++++ b/hello.c
+@@ -5,17 +5,17 @@
+ #include <linux/proc_fs.h>
+ 
+ static int __init custom_init(void) {
+-	printk(KERN_INFO "Hello world!!");
++	printk(KERN_INFO "Hello world Modified!!");
+ 	return 0;
+ }
+ static void __exit custom_exit(void) {
+-	printk(KERN_INFO "Goodbye World!!");
++	printk(KERN_INFO "Goodbye World Modified!!");
+ }
+ 
+ module_init(custom_init);
+ module_exit(custom_exit);
+ 
+ MODULE_AUTHOR("MottiKumar Babu");
+-MODULE_DESCRIPTION("My very first Hello World kernel module");
++MODULE_DESCRIPTION("My very first patch for Hello World kernel module");
+ MODULE_LICENSE("GPL");
+ 
+diff --git a/hello.ko b/hello.ko
+index dff8289a1a2ac16b55442deb7acce67b79d51eca..eefae873bfe694d90a88df652c8612d32964bf55 100644
+GIT binary patch
+delta 538
+zcmXxfPe>F|90&0E&gQZv5wV%hsaZO-5ur$C5xE;3ETe8w6H$(hqEd`XNnNVFb+hFa
+z-*#_{yK3s9F+^UB*;^5U5h$~gwZe7^Do_2n^j>Z6^5Ok{zxVs{9;}D`_3)!O{PcnS
+zyH9;@`!auFarNyL*k<I#nX|9HHl>}L`^<B$GuS`a=fq+fj&!-M(|fniyy%YJaQ?T_
+zn{D;O_O0s!X1_ZsqF5Fy*yer0QHZ2&dd;Es?Kt6`-?8-`wm4a7!H^iKG#O*sztd3j
+zsuWs-mJ+$j{I1SgHK<j)J$rLahv6NojyIxPy!o{zFS*|zi4;=;Eg0i-fi4X3r@%GX
+zFRjP8zf+G?S)RZ>4A9EU?qTNg=)eyKc_i?ZMga-B6Nq4mb^#rAOOS!Wu12{~KpYDU
+z<OE7ICM5wa#cO6HV!T?%50f~~P!WwhG=+n@7UJb8bn5ZX%qk-xmZeD2n3fNdv=o<^
+zk?4L{l(2{2re%&#<C*L{q@_5`jADd=Vui+x<Q*-E-ui^u8M$(cfvWb<n3a@hN%ZI{
+uv$Ha{eS>A??Tx<?t#dNs4y`#kxyX#dXP_9SQADD?Ij6p@X$8iL*!u@_z`3gc
+
+delta 505
+zcmXZXJxmlq6bJD6kKy7;h!7RsD-divE6xuD6N7Y6*&f>n66nqxu|XPLIxFQem;AF-
+zUUDm6M+|IXVq(-vNNmi-;2u#~;u#ywX|SU44cs)pdGF1eH}iHU;q4^m)9?zHE}pKw
+z?`n+gZ~gkH-rU?=*vh}UJ<?g2yw}mwqi}sVpP!tVo$Ai!@8=5pS4;*UHuM0((PMol
+za5a3=_P2_xnTvZdZr0<oPEH-I)~0tvs8%&&;`l|!wPrSIW{1Mk-nK@2I9q>u216!!
+zuq{D+@Qs+^JA+>2_{U%v<GfMC7_u+@A|9R8o8Or#;~~=Y%Tm3-xQu@MpcCL0M(GO4
+z-_2PeO9A>@N|4x;>ZjNUkj6Bf=W;fnYk5uI@|cmJcfr&m2KBBsF*-TDh_vjvU~@m~
+ztR1SETEZX{-6iQ%^eyKY3EE2>HfEM(kVkh}DkJnQ#~E2J(^(Pb=~@c(1>GpJwjx(<
+z&{>siH(kpdeL+`0v9>Dn|9xSqBKCbfdRs+C4A8I0$p?%q9-TEILsv+CerErzRKUAy
+GIR78s+O9|d
+
+diff --git a/hello.o b/hello.o
+index 84e951c1b65bbb6326e7f0afc2c1a100a901a9ff..c467947fa1186fab5d1c16d509b06b0c611a5bb9 100644
+GIT binary patch
+delta 386
+zcmXxgze_?<6bEq6BPDAwEXlxlQqe0M8bW=7UY|dDAO%rFO_imh5WEnF-e&*7dwiEh
+zr=}KhvdKR{P^a9=|G?4L)G_G}pTp%|zUSQAvZ!Z~rBKs8*xixOj8d&qE0@Ay7e#f$
+zDBYW7`O2t2mi~|I8`*BQD2OoSy-&r)LshOAb(ATK9(nBPQs<o<4<$Qq%NH9|fD`(p
+zU}v;F*jh`u7VDA=xmI0;PFo$g=@>5}Mh%2jKl&m<791gHiV5#e(-E4%Obf|Jn8*PP
+z(+bIO(!zUAi?kv%Eryw<prvgho>@m<i_jR3Cg>Y#M$7})S9IBHIP4eHtl%7zt)k0v
+zQ?>^+H@|7-gtWYek6cO$Me)OBC5}WsB^}1mrU0zGLPzN41wF%I$52lM-N9sU(Pg<m
+d%l&mB&5{`L=$5Xyee*xSB;m(U|9gnO{|l|wf*=3@
+
+delta 355
+zcmXAjze_@46o&7SEUQJaqR&Azgl^yx{ZI=%-@SRe&NbL=DydCSnr!ng2<=_GoAnnI
+zcWKM1DUhbTO^p&kIyMA-))}4`4!q|)y%u#_)Y9psy_Sk3lNxQ?wc1(b@;p(lT~yok
+zMEmNN!dNE@O){@(%6q2oY1;6fLI;Z^A>ywT_QvskEV8Nn&!Gy^<~8ZP<oZEc!3}4q
+z0wWj2C#R_iA(`GmJ5f|+nuc&C<Es$DOfrm-)YUs-@T{c&b7h<w8S20_n7Z%{M#s=0
+z&1DRX1ys#64d9wg4fu*#h&`r9IEorv#S(nQIz(~OcN80NiyRoH@K!7Yezp*^3W1Ld
+zj#bQMaZgLQvnCe4#dHL*&-4ICQNmSZ_<tK=Gxgxu92n#=PN<Tt2S<4&4cd)jWa~;m
+HlvaNMawBkc
+
+-- 
+2.39.2
+
