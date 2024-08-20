@@ -1,0 +1,106 @@
+[    4.577642] audit: type=1400 audit(1724103663.111:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=662 comm="apparmor_parser"
+[    4.738223] NET: Registered PF_QIPCRTR protocol family
+[    4.975538] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    6.019192] rfkill: input handler disabled
+[    6.123175] IPv6: ADDRCONF(NETDEV_CHANGE): enx0c37963c6383: link becomes ready
+[    6.123273] r8152 2-1:1.0 enx0c37963c6383: carrier on
+[   16.493277] rfkill: input handler enabled
+[   17.492946] rfkill: input handler disabled
+[  177.427529] i801_smbus 0000:00:1f.4: BIOS is accessing SMBus registers
+[  177.427532] i801_smbus 0000:00:1f.4: Driver SMBus register access inhibited
+[ 3918.574355] hello: loading out-of-tree module taints kernel.
+[ 3918.574408] hello: module verification failed: signature and/or required key missing - tainting kernel
+[ 3918.575177] Hello world!!
+[ 4145.040190] Goodbye World!!
+[ 4179.376574] Hello world!!
+[ 4196.464335] Goodbye World!!
+[ 4242.208540] Hello world!!
+[ 4262.256303] Goodbye World!!
+[ 4881.808650] Hello world!!
+[ 5107.440812] Hello world!!
+[ 5572.080757] Goodbye World!!
+[ 5613.008000] Goodbye World!!
+[ 5655.216339] Hello world Modified!!
+[ 5679.376299] Goodbye World Modified!!
+[ 6328.346423] mmap: typefind:sink (15608): VmData 656482304 exceed data ulimit 536870953. Update limits or use boot option ignore_rlimit_data.
+[ 8662.546374] hello: unknown parameter 'from' ignored
+[ 8662.546376] hello: unknown parameter 'Kernel!' ignored
+[ 8662.546427] Hello world Modified!! Parameter message: Hello
+[ 8727.235205] Goodbye World Modified!!
+[10654.193926] Hello world Modified!! Parameter message: Panic
+[10654.193929] Kernel panic triggered by hello module
+[10680.115226] Goodbye World Modified!!
+[16106.281716] Kernel panic triggered by hello module
+[16106.281720] BUG: unable to handle page fault for address: 0000000000001234
+[16106.281721] #PF: supervisor write access in kernel mode
+[16106.281722] #PF: error_code(0x0002) - not-present page
+[16106.281723] PGD 0 P4D 0 
+[16106.281724] Oops: 0002 [#1] PREEMPT SMP NOPTI
+[16106.281725] CPU: 9 PID: 23904 Comm: insmod Tainted: G           OE      6.1.0-22-amd64 #1  Debian 6.1.94-1
+[16106.281727] Hardware name: Dell Inc. OptiPlex 7490 AIO/0Y0VFJ, BIOS 1.27.1 01/09/2024
+[16106.281728] RIP: 0010:custom_init+0x18/0x1000 [hello]
+[16106.281733] Code: Unable to access opcode bytes at 0xffffffffc04c5fee.
+[16106.281733] RSP: 0018:ffffb7d20a537bd0 EFLAGS: 00010246
+[16106.281734] RAX: 0000000000000026 RBX: ffffffffc04c6000 RCX: 0000000000000000
+[16106.281735] RDX: 0000000000000000 RSI: ffff955e3f6603a0 RDI: ffffffffc141f0c0
+[16106.281736] RBP: ffff955ad2693bd0 R08: 0000000000000000 R09: ffffb7d20a537a68
+[16106.281737] R10: 0000000000000003 R11: ffffffff9e0d4448 R12: ffffb7d20a537bd8
+[16106.281737] R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000000000
+[16106.281738] FS:  00007fa3c07c7040(0000) GS:ffff955e3f640000(0000) knlGS:0000000000000000
+[16106.281739] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[16106.281740] CR2: ffffffffc04c5fee CR3: 0000000106598001 CR4: 0000000000770ee0
+[16106.281741] PKRU: 55555554
+[16106.281741] Call Trace:
+[16106.281743]  <TASK>
+[16106.281744]  ? __die_body.cold+0x1a/0x1f
+[16106.281748]  ? page_fault_oops+0xd2/0x2b0
+[16106.281751]  ? exc_page_fault+0x70/0x170
+[16106.281753]  ? asm_exc_page_fault+0x22/0x30
+[16106.281755]  ? 0xffffffffc04c6000
+[16106.281757]  ? custom_init+0x18/0x1000 [hello]
+[16106.281760]  do_one_initcall+0x56/0x220
+[16106.281763]  do_init_module+0x4a/0x1f0
+[16106.281766]  __do_sys_finit_module+0xac/0x120
+[16106.281769]  do_syscall_64+0x55/0xb0
+[16106.281770]  ? vm_mmap_pgoff+0x103/0x180
+[16106.281773]  ? ksys_mmap_pgoff+0xe8/0x1f0
+[16106.281775]  ? exit_to_user_mode_prepare+0x44/0x1f0
+[16106.281776]  ? syscall_exit_to_user_mode+0x1e/0x40
+[16106.281778]  ? do_syscall_64+0x61/0xb0
+[16106.281779]  ? exit_to_user_mode_prepare+0x44/0x1f0
+[16106.281781]  ? syscall_exit_to_user_mode+0x1e/0x40
+[16106.281782]  ? do_syscall_64+0x61/0xb0
+[16106.281783]  ? do_user_addr_fault+0x1b0/0x550
+[16106.281785]  ? clear_bhb_loop+0x15/0x70
+[16106.281786]  ? clear_bhb_loop+0x15/0x70
+[16106.281787]  ? clear_bhb_loop+0x15/0x70
+[16106.281788]  ? clear_bhb_loop+0x15/0x70
+[16106.281789]  ? clear_bhb_loop+0x15/0x70
+[16106.281790]  entry_SYSCALL_64_after_hwframe+0x6e/0xd8
+[16106.281792] RIP: 0033:0x7fa3c0120719
+[16106.281793] Code: 08 89 e8 5b 5d c3 66 2e 0f 1f 84 00 00 00 00 00 90 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d b7 06 0d 00 f7 d8 64 89 01 48
+[16106.281794] RSP: 002b:00007fff328ee648 EFLAGS: 00000246 ORIG_RAX: 0000000000000139
+[16106.281795] RAX: ffffffffffffffda RBX: 0000563d912647d0 RCX: 00007fa3c0120719
+[16106.281796] RDX: 0000000000000000 RSI: 0000563d912642a0 RDI: 0000000000000003
+[16106.281797] RBP: 0000563d912642a0 R08: 0000000000000000 R09: 0000000000000000
+[16106.281797] R10: 0000000000000003 R11: 0000000000000246 R12: 0000000000000000
+[16106.281798] R13: 0000000000000000 R14: 0000563d91264790 R15: 0000563d912642a0
+[16106.281799]  </TASK>
+[16106.281800] Modules linked in: hello(OE+) xt_CHECKSUM xt_MASQUERADE xt_conntrack ipt_REJECT nf_reject_ipv4 xt_tcpudp nft_compat nft_chain_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 snd_seq_dummy snd_hrtimer snd_seq snd_seq_device nf_tables nfnetlink bridge stp llc rfkill qrtr binfmt_misc nls_ascii nls_cp437 vfat fat snd_hda_codec_hdmi intel_rapl_msr intel_rapl_common x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel snd_sof_pci_intel_tgl kvm snd_sof_intel_hda_common soundwire_intel soundwire_generic_allocation irqbypass soundwire_cadence snd_sof_intel_hda snd_sof_pci snd_sof_xtensa_dsp snd_ctl_led snd_sof ghash_clmulni_intel snd_sof_utils snd_soc_hdac_hda sha512_ssse3 snd_hda_codec_realtek snd_hda_ext_core sha512_generic snd_soc_acpi_intel_match snd_soc_acpi sha256_ssse3 snd_hda_codec_generic sha1_ssse3 ledtrig_audio snd_soc_core snd_compress soundwire_bus uvcvideo snd_hda_intel snd_intel_dspcfg videobuf2_vmalloc videobuf2_memops snd_intel_sdw_acpi aesni_intel
+[16106.281821]  snd_hda_codec videobuf2_v4l2 videobuf2_common crypto_simd snd_hda_core cryptd snd_hwdep videodev dell_wmi mei_hdcp snd_pcm iTCO_wdt dell_smbios intel_pmc_bxt intel_cstate dcdbas mc dell_wmi_aio dell_wmi_sysman dell_wmi_descriptor intel_uncore snd_timer iTCO_vendor_support firmware_attributes_class mei_me wmi_bmof snd watchdog mei pcspkr soundcore acpi_pad intel_hid intel_pmc_core acpi_tad sparse_keymap evdev msr parport_pc ppdev lp parport fuse dm_mod loop efi_pstore configfs ip_tables x_tables autofs4 ext4 crc16 mbcache jbd2 btrfs blake2b_generic zstd_compress efivarfs raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq libcrc32c crc32c_generic raid1 raid0 multipath linear md_mod r8153_ecm cdc_ether usbnet hid_generic usbhid r8152 hid mii i915 drm_buddy i2c_algo_bit drm_display_helper cec ahci nvme libahci rc_core nvme_core xhci_pci ttm rtsx_pci_sdmmc libata xhci_hcd t10_pi mmc_core drm_kms_helper crc64_rocksoft crc64 drm usbcore e1000e
+[16106.281850]  scsi_mod crc32_pclmul crc32c_intel video rtsx_pci crc_t10dif i2c_i801 crct10dif_generic i2c_smbus crct10dif_pclmul crct10dif_common scsi_common usb_common fan button wmi [last unloaded: hello(OE)]
+[16106.281856] CR2: 0000000000001234
+[16106.281857] ---[ end trace 0000000000000000 ]---
+[16106.491907] RIP: 0010:custom_init+0x18/0x1000 [hello]
+[16106.491951] Code: Unable to access opcode bytes at 0xffffffffc04c5fee.
+[16106.491967] RSP: 0018:ffffb7d20a537bd0 EFLAGS: 00010246
+[16106.491969] RAX: 0000000000000026 RBX: ffffffffc04c6000 RCX: 0000000000000000
+[16106.491970] RDX: 0000000000000000 RSI: ffff955e3f6603a0 RDI: ffffffffc141f0c0
+[16106.491971] RBP: ffff955ad2693bd0 R08: 0000000000000000 R09: ffffb7d20a537a68
+[16106.491972] R10: 0000000000000003 R11: ffffffff9e0d4448 R12: ffffb7d20a537bd8
+[16106.491972] R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000000000
+[16106.491973] FS:  00007fa3c07c7040(0000) GS:ffff955e3f640000(0000) knlGS:0000000000000000
+[16106.491974] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[16106.491975] CR2: ffffffffc04c5fee CR3: 0000000106598001 CR4: 0000000000770ee0
+[16106.491976] PKRU: 55555554
+[16106.491978] note: insmod[23904] exited with irqs disabled
