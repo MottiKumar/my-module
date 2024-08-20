@@ -4,18 +4,22 @@
 #include <linux/fs.h>
 #include <linux/proc_fs.h>
 
+static char *message = "default message";
+module_param(message, charp, 0000);
+MODULE_PARM_DESC(message, "A string parameter for the Hello World module");
+
 static int __init custom_init(void) {
-	printk(KERN_INFO "Hello world Modified!!");
+	printk(KERN_INFO "Hello world Modified!! Parameter message: %s\n", message);
 	return 0;
 }
+
 static void __exit custom_exit(void) {
-	printk(KERN_INFO "Goodbye World Modified!!");
+	printk(KERN_INFO "Goodbye World Modified!!\n");
 }
 
 module_init(custom_init);
 module_exit(custom_exit);
 
 MODULE_AUTHOR("MottiKumar Babu");
-MODULE_DESCRIPTION("My very first patch for Hello World kernel module");
+MODULE_DESCRIPTION("My very first patch for Hello World kernel module with string parameter");
 MODULE_LICENSE("GPL");
-

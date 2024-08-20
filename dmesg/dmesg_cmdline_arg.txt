@@ -1,0 +1,27 @@
+[    6.019192] rfkill: input handler disabled
+[    6.123175] IPv6: ADDRCONF(NETDEV_CHANGE): enx0c37963c6383: link becomes ready
+[    6.123273] r8152 2-1:1.0 enx0c37963c6383: carrier on
+[   16.493277] rfkill: input handler enabled
+[   17.492946] rfkill: input handler disabled
+[  177.427529] i801_smbus 0000:00:1f.4: BIOS is accessing SMBus registers
+[  177.427532] i801_smbus 0000:00:1f.4: Driver SMBus register access inhibited
+[ 3918.574355] hello: loading out-of-tree module taints kernel.
+[ 3918.574408] hello: module verification failed: signature and/or required key missing - tainting kernel
+[ 3918.575177] Hello world!!
+[ 4145.040190] Goodbye World!!
+[ 4179.376574] Hello world!!
+[ 4196.464335] Goodbye World!!
+[ 4242.208540] Hello world!!
+[ 4262.256303] Goodbye World!!
+[ 4881.808650] Hello world!!
+[ 5107.440812] Hello world!!
+[ 5572.080757] Goodbye World!!
+[ 5613.008000] Goodbye World!!
+[ 5655.216339] Hello world Modified!!
+[ 5679.376299] Goodbye World Modified!!
+[ 6328.346423] mmap: typefind:sink (15608): VmData 656482304 exceed data ulimit 536870953. Update limits or use boot option ignore_rlimit_data.
+[ 8662.546374] hello: unknown parameter 'from' ignored
+[ 8662.546376] hello: unknown parameter 'Kernel!' ignored
+[ 8662.546427] Hello world Modified!! Parameter message: Hello
+[ 8727.235205] Goodbye World Modified!!
+
